@@ -47,4 +47,5 @@ war {
 }
 
 jib.from.image = 'gcr.io/distroless/java/jetty:debug'
+jib.container.appRoot = '/jetty/webapps/ROOT'
 jib.to.image = 'gcr.io/REPLACE-WITH-YOUR-GCP-PROJECT/image-built-with-jib'

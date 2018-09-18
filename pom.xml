@@ -4,12 +4,28 @@
   <groupId>example</groupId>
   <artifactId>helloworld</artifactId>
   <version>1</version>
+  <packaging>war</packaging>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jib-maven-plugin.version>0.9.11-SNAPSHOT</jib-maven-plugin.version>
     <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
   </properties>
+
+  <dependencies>
+    <!-- Compile/runtime dependencies -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
@@ -29,9 +45,15 @@
         <artifactId>jib-maven-plugin</artifactId>
         <version>${jib-maven-plugin.version}</version>
         <configuration>
+          <from>
+            <image>gcr.io/distroless/java/jetty:debug</image>
+          </from>
           <to>
             <image>gcr.io/REPLACE-WITH-YOUR-GCP-PROJECT/image-built-with-jib</image>
           </to>
+          <container>
+            <appRoot>/jetty/webapps/ROOT</appRoot>
+          </container>
         </configuration>
         <executions>
           <execution>
