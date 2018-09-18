@@ -55,6 +55,7 @@
             <appRoot>/jetty/webapps/ROOT</appRoot>
           </container>
         </configuration>
+        <!--
         <executions>
           <execution>
             <phase>package</phase>
@@ -63,6 +64,7 @@
             </goals>
           </execution>
         </executions>
+        -->
       </plugin>
     </plugins>
   </build>
