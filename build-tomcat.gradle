@@ -42,4 +42,8 @@ war {
   classpath configurations.moreLibs
 }
 
-jib.to.image = 'gcr.io/REPLACE-WITH-YOUR-GCP-PROJECT/image-built-with-jib'
+jib {
+  from.image = 'tomcat:8.5-jre8-alpine'
+  to.image = 'gcr.io/francium25/test'
+  container.appRoot = '/usr/local/tomcat/webapps/ROOT'
+}

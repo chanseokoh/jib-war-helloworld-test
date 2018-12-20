@@ -10,7 +10,7 @@
     <java.target.version>1.8</java.target.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <jib-maven-plugin.version>1.0.0-SNAPSHOT</jib-maven-plugin.version>
+    <jib-maven-plugin.version>0.10.0</jib-maven-plugin.version>
   </properties>
 
   <dependencies>
@@ -49,7 +49,21 @@
         <artifactId>jib-maven-plugin</artifactId>
         <version>${jib-maven-plugin.version}</version>
         <configuration>
-          <packagingOverride>war</packagingOverride>
+          <from>
+            <image>francium25/base-tomcat</image>
+            <!--image>tomcat:8.5-jre8-alpine</image-->
+          </from>
+          <container>
+            <appRoot>/usr/local/tomcat/webapps/ROOT</appRoot>
+          </container>
+          <extraDirectory>
+            <permissions>
+              <permission>
+                <file>/usr/local/tomcat/webapps/ROOT</file>
+                <mode>757</mode>
+              </permission>
+            </permissions>
+          </extraDirectory>
         </configuration>
       </plugin>
     </plugins>
