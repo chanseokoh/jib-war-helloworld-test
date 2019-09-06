@@ -50,12 +50,12 @@
         <version>${jib-maven-plugin.version}</version>
         <configuration>
           <from>
-            <image>francium25/base-tomcat</image>
-            <!--image>tomcat:8.5-jre8-alpine</image-->
+            <image>tomcat:8.5-jre8-alpine</image>
           </from>
           <container>
             <appRoot>/usr/local/tomcat/webapps/ROOT</appRoot>
           </container>
+          <!--
           <extraDirectory>
             <permissions>
               <permission>
@@ -64,6 +64,7 @@
               </permission>
             </permissions>
           </extraDirectory>
+          -->
         </configuration>
       </plugin>
     </plugins>

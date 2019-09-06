@@ -49,7 +49,9 @@
         <artifactId>jib-maven-plugin</artifactId>
         <version>${jib-maven-plugin.version}</version>
         <configuration>
-          <packagingOverride>war</packagingOverride>
+          <from>
+            <image>francium25/jetty_java11_debug</image>
+          </from>
         </configuration>
       </plugin>
     </plugins>
