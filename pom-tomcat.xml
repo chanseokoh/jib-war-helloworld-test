@@ -7,7 +7,6 @@
   <packaging>war</packaging>
 
   <properties>
-    <java.target.version>1.8</java.target.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <jib-maven-plugin.version>0.10.0</jib-maven-plugin.version>
@@ -55,16 +54,6 @@
           <container>
             <appRoot>/usr/local/tomcat/webapps/ROOT</appRoot>
           </container>
-          <!--
-          <extraDirectory>
-            <permissions>
-              <permission>
-                <file>/usr/local/tomcat/webapps/ROOT</file>
-                <mode>757</mode>
-              </permission>
-            </permissions>
-          </extraDirectory>
-          -->
         </configuration>
       </plugin>
     </plugins>

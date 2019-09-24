@@ -7,10 +7,9 @@
   <packaging>war</packaging>
 
   <properties>
-    <java.target.version>1.8</java.target.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <jib-maven-plugin.version>1.0.0-SNAPSHOT</jib-maven-plugin.version>
+    <jib-maven-plugin.version>1.6.1</jib-maven-plugin.version>
   </properties>
 
   <dependencies>
@@ -48,11 +47,6 @@
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>jib-maven-plugin</artifactId>
         <version>${jib-maven-plugin.version}</version>
-        <configuration>
-          <from>
-            <image>francium25/jetty_java11_debug</image>
-          </from>
-        </configuration>
       </plugin>
     </plugins>
   </build>

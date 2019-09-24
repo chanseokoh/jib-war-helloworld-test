@@ -1,7 +1,7 @@
 plugins {
   id 'java'
   id 'war'
-  id 'com.google.cloud.tools.jib' version '1.5.1'
+  id 'com.google.cloud.tools.jib' version '1.6.1'
 }
 
 sourceCompatibility = 1.8
@@ -26,5 +26,3 @@ war {
   from ('src/extra_js', { into 'js' })
   classpath configurations.moreLibs
 }
-
-jib.to.image = 'gcr.io/REPLACE-WITH-YOUR-GCP-PROJECT/image-built-with-jib'
