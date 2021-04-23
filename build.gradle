@@ -1,7 +1,7 @@
 plugins {
   id 'java'
   id 'war'
-  id 'com.google.cloud.tools.jib' version '2.1.0'
+  id 'com.google.cloud.tools.jib' version '3.0.0'
 }
 
 sourceCompatibility = 1.8

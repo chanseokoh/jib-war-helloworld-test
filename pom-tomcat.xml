@@ -9,7 +9,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <jib-maven-plugin.version>2.1.0</jib-maven-plugin.version>
+    <jib-maven-plugin.version>3.0.0</jib-maven-plugin.version>
   </properties>
 
   <dependencies>
